@@ -1,0 +1,81 @@
+/* Estilos gerais */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+/* Estilos para dispositivos móveis */
+
+@media (max-width: 767px) {
+  header {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
