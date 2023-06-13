@@ -1,81 +1,65 @@
-/* Estilos gerais */
-
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
-
-h1 {
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #333;
+  overflow: hidden;
 }
 
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
+.title {
   color: #fff;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  animation: slideInUp 1s ease-in-out;
+}
+
+.button {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
   text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
 }
 
-main {
-  padding: 20px;
+.button:hover {
+  background-color: #666;
+  color: #fff;
 }
 
-section {
-  margin-bottom: 20px;
-}
-
-h2 {
-  margin-top: 0;
-}
-
-ul, ol {
-  margin: 0;
-  padding: 0 0 0 20px;
-}
-
-/* Estilos para dispositivos móveis */
-
-@media (max-width: 767px) {
-  header {
-    padding: 10px;
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
   }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav li {
-    margin: 10px 0;
-  }
-
-  main {
-    padding: 10px;
+  100% {
+    transform: translateY(0);
   }
 }
