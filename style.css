@@ -17,33 +17,86 @@ body {
   padding: 20px;
 }
 
-.title {
-  color: #333;
-  font-size: 36px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
+/* Navbar */
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-.subtitle {
-  color: #777;
+.navbar-brand {
   font-size: 24px;
-  margin-bottom: 30px;
+  font-weight: bold;
+  margin: 0;
 }
 
-.content {
-  margin-bottom: 30px;
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+.navbar-link {
+  margin-right: 10px;
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 10px;
+.navbar-link a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-link a:hover {
+  color: #ffcc00;
+}
+
+/* Animações */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Exemplo de animação no título */
+
+.title {
+  font-size: 36px;
+  color: #333;
+  animation: fade-in 1s ease-in;
+}
+
+.title:hover {
+  animation: spin 2s linear infinite;
 }
 
 /* Estilos para dispositivos móveis */
@@ -57,15 +110,15 @@ p {
     font-size: 24px;
   }
 
-  .subtitle {
+  .navbar {
+    padding: 5px;
+  }
+
+  .navbar-brand {
     font-size: 20px;
   }
 
-  h2 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 14px;
+  .navbar-link a {
+    padding: 5px;
   }
 }
