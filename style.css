@@ -101,13 +101,15 @@ body {
 
 /* Estilos para dispositivos móveis */
 
+/* Estilos para dispositivos móveis */
+
 @media (max-width: 767px) {
   .container {
     padding: 10px;
   }
 
   .title {
-    font-size: 28px;
+    font-size: 32px; /* Altere o tamanho desejado */
   }
 
   .navbar {
@@ -121,4 +123,6 @@ body {
   .navbar-link a {
     padding: 5px;
   }
+}
+
 }
