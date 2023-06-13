@@ -6,60 +6,102 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #333;
-  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .title {
-  color: #fff;
+  color: #333;
   font-size: 36px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  animation: fadeIn 1s ease-in-out;
+  animation: fade-in 1s ease-in;
+  text-align: center;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.subtitle {
+  color: #777;
+  font-size: 24px;
+  margin-bottom: 20px;
+  animation: slide-up 1s ease-in;
+  text-align: center;
+}
+
+.content {
+  display: none;
+  text-align: center;
+  animation: fade-in 1s ease-in;
+  margin-bottom: 20px;
+}
+
+.secondary-content {
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slide-up 1s ease-in;
 }
 
 .button-container {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  animation: slideInUp 1s ease-in-out;
 }
 
 .button {
   display: inline-block;
   margin: 0 10px;
   padding: 10px 20px;
-  background-color: #fff;
-  color: #333;
+  background-color: #333;
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
+  border: none;
   border-radius: 4px;
-  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  animation: fade-in 1s ease-in;
 }
 
 .button:hover {
   background-color: #666;
-  color: #fff;
 }
 
-@keyframes slideInUp {
-  0% {
-    transform: translateY(100%);
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
-  100% {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+  }
+  to {
     transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
